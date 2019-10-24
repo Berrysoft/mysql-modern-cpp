@@ -16,15 +16,15 @@ install(TARGETS mysqlppp EXPORT mysqlppp_targets)
 include(CMakePackageConfigHelpers)
 
 export(EXPORT mysqlppp_targets
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/mysql+++/mysqlppp-targets.cmake"
+  FILE "${CMAKE_CURRENT_BINARY_DIR}/mysqlppp/mysqlppp-targets.cmake"
   NAMESPACE mysqlppp::
 )
 configure_file(cmake/mysqlppp-config.cmake
-  "${CMAKE_CURRENT_BINARY_DIR}/mysql+++/mysqlppp-config.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/mysqlppp/mysqlppp-config.cmake"
   COPYONLY
 )
 
-set(ConfigPackageLocation lib/mysql+++)
+set(ConfigPackageLocation lib/mysqlppp)
 install(EXPORT mysqlppp_targets
   FILE
   mysqlppp-targets.cmake
